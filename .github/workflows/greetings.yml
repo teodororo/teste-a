@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: |
           👋 Hello  @${{github.actor}}!
           This repository is *only* for kernel source requests. 
