@@ -1,16 +1,15 @@
-name: Triage
+name: issue-checklist
+
 on:
   issues:
     types: [opened]
+
 jobs:
-  commentOnNewIssues:
-    name: Comment On New Issues
+  comment:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Comment On New Issues
-        uses: actions/github@v1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: comment "Hello World"
+    - uses: ben-z/actions-comment-on-issue@1.0.2
+      with:
+        message: "Gentle reminder:\n* Did you go through all of the troubleshooting steps outlined in README.md?"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
