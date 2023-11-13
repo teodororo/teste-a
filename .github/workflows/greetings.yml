@@ -1,21 +1,16 @@
-name: Comentar
-
+name: Triage
 on:
   issues:
-    types:
-      - opened
-
+    types: [opened]
 jobs:
-  comment:
+  commentOnNewIssues:
+    name: Comment On New Issues
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-
-    - name: Comment on issue
-      run: |
-        echo 'oi' > comment.txt
-        gh issue comment ${{ github.event.issue.number }} --body comment.txt
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Comment On New Issues
+        uses: actions/github@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: comment "Hello World"
