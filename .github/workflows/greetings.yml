@@ -1,26 +1,17 @@
-name: Add Comment to New Issue
 on:
   issues:
-    types:
-      - opened
+    types: [opened]
 
 jobs:
-  add-comment:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Add a comment to the new issue
-        uses: actions/github-script@v5
+      - uses: actions/github-script@v7
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const issueNumber = context.issue.number;
-            const commentBody = "Obrigado por criar essa issue! Vamos verificar isso em breve.";
-            github.issues.createComment({
-              issue_number: issueNumber,
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: commentBody
-            });
+              body: '👋 Thanks for reporting!'
+            })
