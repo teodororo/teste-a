@@ -14,15 +14,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: |
-              👋 Hello  @${{github.actor}}!
-              This repository is *only* for kernel source requests. 
-              In order for us to register your request, please inform the exact released version (build ID) of the product, you can find it in the System Config. 
-              It is a group of letters and numbers that look like these: RRA31.Q3-19-19, S1RD32.55-33, S0RCS32.41-10-9-2, T2TZ33.28-16-19.
-              :triangular_flag_on_post: ATTENTION:
-              * We accept only one request per issue. If you have more than one request, please open another issue.   
-              * Some requests are quicker to fulfill than others. In general, the waiting time is 20 days.
-              * If the build ID is of a product that hasn’t been released yet, we won’t be able to publish it. 
-              * Do not spam, please.
+              body: '👋 Hello  @${{github.actor}}! \n This repository is *only* for kernel source requests. In order for us to register your request, please inform the exact released version (build ID) of the product, you can find it in the System Config. It is a group of letters and numbers that look like these: RRA31.Q3-19-19, S1RD32.55-33, S0RCS32.41-10-9-2, T2TZ33.28-16-19. \n  :triangular_flag_on_post: ATTENTION: \n * We accept only one request per issue. If you have more than one request, please open another issue. \n  * Some requests are quicker to fulfill than others. In general, the waiting time is 20 days. \n * If the build ID is of a product that hasn’t been released yet, we won’t be able to publish it. \n * Do not spam, please.'
             })
           
