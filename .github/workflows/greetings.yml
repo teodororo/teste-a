@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/github-script@v7
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -15,3 +16,4 @@ jobs:
               repo: context.repo.repo,
               body: '👋 Thanks for reporting!'
             })
+          
