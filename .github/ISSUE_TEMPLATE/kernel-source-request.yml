@@ -1,5 +1,5 @@
 name: 🚀 Kernel Source Request
-title: [REQUEST] Kernel Source for <build_id>
+title: "[REQUEST] Kernel Source for <build_id>"
 description: Open source software (OSS) of a device
 labels: [request]
 body:
@@ -7,7 +7,6 @@ body:
     attributes:
       value: |
         Thank you for submitting a Kernel Source Request!
-        
         ❗ ATTENTION:
         - We accept only one request per issue. If you have more than one request, please open another issue.
         - Some requests are quicker to fulfill than others. It's not a FIFO system.
@@ -43,7 +42,8 @@ body:
       description: Provide the device's Build ID. 
       placeholder: |
         💡 You find it in the System Config. 
-        It is a group of letters and numbers that look like these: RRA31.Q3-19-19, S1RD32.55-33, S0RCS32.41-10-9-2, T2TZ33.28-16-19.
+        It is a group of letters and numbers that look like these: 
+        RRA31.Q3-19-19, S1RD32.55-33, S0RCS32.41-10-9-2, T2TZ33.28-16-19.
     validations:
       required: true
 
