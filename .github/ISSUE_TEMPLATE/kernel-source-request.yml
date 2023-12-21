@@ -6,8 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for submitting a Kernel Source Request!
-        ❗ ATTENTION:
+        ❗ **ATTENTION:**
         - We accept only one request per issue. If you have more than one request, please open another issue.
         - Some requests are quicker to fulfill than others. It's not a FIFO system.
         - If the build ID is of a product that hasn’t been released yet, we won’t be able to publish it.
