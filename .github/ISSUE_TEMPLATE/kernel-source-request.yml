@@ -1,0 +1,54 @@
+name: 🚀 Kernel Source Request
+#title: "[REQUEST] Kernel Source for "
+description: Open source software (OSS) of a device
+labels: [request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a Kernel Source Request!
+        ❗ ATTENTION:
+        - We accept only one request per issue. If you have more than one request, please open another issue.
+        - Some requests are quicker to fulfill than others. It's not a FIFO system.
+        - If the build ID is of a product that hasn’t been released yet, we won’t be able to publish it.
+        - Do not spam, please.
+
+  - type: checkboxes
+    attributes:
+      label: Search before asking
+      description: >
+        Please search the [tags](https://github.com/MotorolaMobilityLLC/kernel-mtk/tags) to see if a similar release already exists.
+      options:
+        - label: >
+            I have searched the [tags](https://github.com/MotorolaMobilityLLC/kernel-mtk/tags) and found no similar request.
+          required: true
+
+  - type: dropdown
+    attributes:
+      label: Type of device
+      description: |
+        Please select the type of device you're requesting.
+      multiple: false
+      options:
+        - "Smartphone"
+        - "Tablet"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Build ID
+      description: Provide the device's Build ID. 
+      placeholder: |
+        💡 You find it in the System Config. It is a group of letters and numbers that look like these: RRA31.Q3-19-19, S1RD32.55-33, S0RCS32.41-10-9-2, T2TZ33.28-16-19.
+    validations:
+      required: true
+
+
+  - type: textarea
+    attributes:
+      label: Additional
+      description: Anything else you'd like to add?
+      placeholder: |
+        How will you use this code? We'd love to know!
